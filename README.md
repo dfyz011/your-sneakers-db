@@ -9,7 +9,12 @@ cd client
 npm install
 npm run build
 ```
-Start server with nodemon,pm2 or forever
+Install modules for backend:
+```
+cd backend
+npm install
+```
+Start server with nodemon,pm2 or forever:
 ```
 cd backend
 pm2 start server.js# your-sneakers-db
