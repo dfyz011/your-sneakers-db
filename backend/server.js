@@ -1,15 +1,22 @@
 const express = require("express");
-require('dotenv').config();
+
+const config=require('dotenv').config();
+process.env["SECRET"] ="asdfqwerty";
+process.env["PORT"] ="7000";
+process.env["DB"] ="mongodb://localhost:27017/sneakerShop";
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const passport = require("passport");
-const db = require("./database/db.js");
 const usersRouter = require('./routes/users');
 const sneakersRouter = require('./routes/sneakers');
 const path = require("path");
 const app = express();
-const apiPort = process.env.PORT;
+const db = require("./database/db.js");
+
 require("./passport")(passport);
+
+
+const apiPort = process.env.PORT;
 
 app.use(
     bodyParser.urlencoded({
