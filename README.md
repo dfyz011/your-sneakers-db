@@ -6,8 +6,8 @@ sudo service mongod start
 Perfom production build of client:
 ```
 cd client
-sudo npm install
-sudo npm run build
+npm install
+npm run build
 ```
 Start server with nodemon,pm2 or forever
 ```
